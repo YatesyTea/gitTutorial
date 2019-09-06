@@ -1,12 +1,22 @@
 # Git Basics
 
-This file has been made in order to teach me, and potentially others in how to use git in tandem with github effectively.
+## Table of Contents
+
+[TOC]
+
+## Introduction
+
+This file has been made in order to teach me, and potentially others in how to use git in tandem with GitHub effectively.
+
+This only covers the extreme basics, and will not be able to troubleshoot any major issues.
 
 ![Git Logo](gitBasicsAssets/gitLogo.png)
 
+
+
 ## How Git Works
 
-##### The version control of Git (the local section) is divided into three parts:
+### The 3 parts of Git
 
 In the **working directory** are the changes that you make but have not told git to accept.
 
@@ -24,21 +34,24 @@ Or if the work changes were done on another computer/ by another user, you can p
 
 ## Creating Local Git Repository
 
-Find the folder that you want to use using 
+Find the location for the directory where you want to initialise this git repository using:
 
 ```pseudocode
-ls <!-- Views the list of files within current directory -->
-cd dirName <!-- Changes directory to the directory of name specified -->
-mk dirName <!-- Creates a directory in the current location of name specified -->
-git init <!-- Initialises a repository in the current directory -->
+ls
 ```
 
+This will display all of the contents of the current directory.
 
 
-Steps
 
-* Locate/Create location of new repository
-* Use 'git init' after changing directory to the location
+You can move to the  target directory and then initialise the repository using:
+
+```pseudocode
+cd targetDirectory
+git init
+```
+
+This will the initialise the repository.
 
 
 
@@ -50,11 +63,15 @@ You can save a file in the directory, or use the touch command:
 touch fileName.fileType
 ```
 
+
+
 Then use the status command to see what files git acknowledges:
 
 ```pseudocode
 git status
 ```
+
+
 
 It will then display text like this:
 
@@ -71,11 +88,15 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+
+
 This means that we need to add the file to the staging area, we do this using the add command:
 
 ```pseudocode
 git add fileName.fileType
 ```
+
+
 
 Now when you type the status command:
 
@@ -90,9 +111,82 @@ Changes to be commited:
 		new file:	fileName.fileType
 ```
 
-This file is still only in the staging area though, we still need to commit it to the repository.
 
 
+This file is still only in the staging area though, we still need to commit it to the repository:
+
+```pseudocode
+git commit -m "Comment on what you're commiting..."
+```
+
+
+
+This will then return something along the lines of:
+
+```pseudocode
+[master (root-commit) kjfkdsf23] Comment on what you're commiting...
+	1 file changed, 1 insertion(+)
+	create mode 100644 fileName.fileType
+```
+
+Always make sure that the comment on the commit is relevant to the commit that you are making.
+
+
+
+## Creating a New Branch
+
+We use this when we're scared that we might break something by adding things, it makes sure that even if there's complete nuclear meltdown it doesn't affect the master branch.
+
+To start with we want to use the git command below
+
+```pseudocode
+git checkout -b branchName
+```
+
+This will create the branch, and then move you to that branch as your current place where all changes take place.
+
+You can then use the git branch command for confirmation of both creation and movement over to the new branch.
+
+```pseudocode
+git branch
+	master
+   *branchName
+```
+
+The asterisk refers to the branch that you're currently pointing to.
+
+
+
+You can then change between branches by using the checkout command, for example if we want to change back to the master branch.
+
+```pseudocode
+git checkout master
+```
+
+Any changes that you make to the master will not be made to the branch and vice-versa.
+
+
+
+## Create a Repository on Github
+
+![GitHub Logo](gitBasicsAssets/githubLogo.png)
+
+
+
+
+
+
+
+
+
+## List of Relevant Bash and Git Commands
+
+```pseudocode
+ls <!-- Views the list of files within current directory -->
+cd dirName <!-- Changes directory to the directory of name specified -->
+mk dirName <!-- Creates a directory in the current location of name specified -->
+git init <!-- Initialises a repository in the current directory -->
+```
 
 
 
