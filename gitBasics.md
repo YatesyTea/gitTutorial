@@ -34,6 +34,7 @@ Or if the work changes were done on another computer/ by another user, you can p
 
 ## Creating Local Git Repository
 
+
 Find the location for the directory where you want to initialise this git repository using:
 
 ```pseudocode
@@ -57,6 +58,7 @@ This will the initialise the repository.
 
 ## Adding a New File To The Repository
 
+
 You can save a file in the directory, or use the touch command:
 
 ```pseudocode
@@ -64,13 +66,11 @@ touch fileName.fileType
 ```
 
 
-
 Then use the status command to see what files git acknowledges:
 
 ```pseudocode
 git status
 ```
-
 
 
 It will then display text like this:
@@ -89,13 +89,11 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 
-
 This means that we need to add the file to the staging area, we do this using the add command:
 
 ```pseudocode
 git add fileName.fileType
 ```
-
 
 
 Now when you type the status command:
@@ -118,7 +116,6 @@ This file is still only in the staging area though, we still need to commit it t
 ```pseudocode
 git commit -m "Comment on what you're commiting..."
 ```
-
 
 
 This will then return something along the lines of:
@@ -155,8 +152,6 @@ git branch
 
 The asterisk refers to the branch that you're currently pointing to.
 
-
-
 You can then change between branches by using the checkout command, for example if we want to change back to the master branch.
 
 ```pseudocode
@@ -167,15 +162,95 @@ Any changes that you make to the master will not be made to the branch and vice-
 
 
 
-## Create a Repository on Github
+## Create a Repository on GitHub
 
 ![GitHub Logo](gitBasicsAssets/githubLogo.png)
 
+There is no way to do this directly from git bash unfortunately.
+You therefore have to use either, the github gui client, or the github website in order to create a repository.
+On both, you create the repository by clicking a create repository button and filling in the relevant details such as name and description, alongside a readme file.
+
+You are then asked if you would like to create a repository from scratch or use one that you have created locally.
+When you select the locally one you will then want to input in your git bash:
+
+```pseudocode
+git remote add origin https://github.com/userHandle/repositoryName.git
+git push -u origin master
+```
+
+This should then respond with:
+
+```pseudocode
+Counting objects: 6, done.
+Writing objects: 100% (6/6), 1226 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/userHandle/repositoryName.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+```
+
+With this the repository is initialised on GitHub.
 
 
 
+## Pushing a Branch to GitHub
+
+Pushing onto GitHub doesn't automatically override everything that is already there, you will have to merge with the master branch later:
+
+```pseudocode
+git push origin branchName
+```
+
+After this, you can then press the green button titled "Compare and pull request".
 
 
+
+## Creating a Pull Request
+
+This is way to notify repository owners of changes that you want to make to the 'code'.
+The owner can then review it and decide whether to allow it.
+
+
+
+## Merging a Pull Request
+
+This is done by clicking the green button titled "Merge pull request", this will then merge the branch with the master.
+In some cases there will be a merge conflict, in which case you need to tell git what to use and what to chuck.
+
+While you don't 100% have to do this as a sole owner, it does make it more clear what you're doing and is good practice for documentation of your project.
+
+
+
+## Cleaning Up
+
+After making sure that the request was properly executed, it is good practice to delete the branch that was just added, this clears out space and makes things less confusing in the long run.
+
+
+
+## Getting Stuff From GitHub Back
+
+Things will be different on your computer than from GitHub at this point, and considering this is all about version control, that ain't good chief.
+You can resolve this by pulling from GitHub to your local repository:
+
+```pseudocode
+git pull origin master
+```
+
+
+
+It will then return something like this:
+
+```pseudocode
+remote: Counting objects: 1, done.
+remote: Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/userHandle/repositoryName.git
+ * branch            master     -> FETCH_HEAD
+   b39487d..b39387d  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ fileName.fileType | 1 +
+ 1 file changed, 15 insertion(+)
+```
 
 
 
