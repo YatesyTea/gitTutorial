@@ -2,7 +2,19 @@
 
 ## Table of Contents
 
-[TOC]
+1. [Introduction](## Introduction)
+2. [How Git Works](## How Git Works)
+3. [Creating a Local Git Repository](## Creating a Local Git Repository)
+4. [Adding a new File To The Repository](## Adding a New File To The Repository)
+5. [Creating a New Branch](## Creating a New Branch)
+6. [Create a Repository on GitHub](## Create a Repository on GitHub)
+7. [Pushing a Branch to Github](## Pushing a Branch to GitHub)
+8. [Creating a Pull Request](## Creating a Pull Request)
+9. [Merging a Pull Request](## Merging a Pull Request)
+10. [Cleaning Up](## Cleaning Up)
+11. [Getting Stuff From Gihub Back](## Getting Stuff From GitHub Back)
+12. [List of Bash and Git Commands](## List of Relevant Bash and Git Commands)
+
 
 ## Introduction
 
