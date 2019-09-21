@@ -2,21 +2,21 @@
 
 ## Table of Contents
 
-1. [Introduction](## Introduction)
-2. [How Git Works](## How Git Works)
-3. [Creating a Local Git Repository](## Creating a Local Git Repository)
-4. [Adding a new File To The Repository](## Adding a New File To The Repository)
-5. [Creating a New Branch](## Creating a New Branch)
-6. [Create a Repository on GitHub](## Create a Repository on GitHub)
-7. [Pushing a Branch to Github](## Pushing a Branch to GitHub)
-8. [Creating a Pull Request](## Creating a Pull Request)
-9. [Merging a Pull Request](## Merging a Pull Request)
-10. [Cleaning Up](## Cleaning Up)
-11. [Getting Stuff From Gihub Back](## Getting Stuff From GitHub Back)
-12. [List of Bash and Git Commands](## List of Relevant Bash and Git Commands)
+1. [Introduction](#Introduction)
+2. [How Git Works](#How Git Works)
+3. [Creating a Local Git Repository](#Creating a Local Git Repository)
+4. [Adding a new File To The Repository](#Adding a New File To The Repository)
+5. [Creating a New Branch](#Creating a New Branch)
+6. [Create a Repository on GitHub](#Create a Repository on GitHub)
+7. [Pushing a Branch to Github](#Pushing a Branch to GitHub)
+8. [Creating a Pull Request](#Creating a Pull Request)
+9. [Merging a Pull Request](#Merging a Pull Request)
+10. [Cleaning Up](#Cleaning Up)
+11. [Getting Stuff From Gihub Back](#Getting Stuff From GitHub Back)
+12. [List of Bash and Git Commands](#List of Relevant Bash and Git Commands)
 
 
-## Introduction
+<h2 id = "Introduction">Introduction</h2>
 
 This file has been made in order to teach me, and potentially others in how to use git in tandem with GitHub effectively.
 
@@ -26,7 +26,7 @@ This only covers the extreme basics, and will not be able to troubleshoot any ma
 
 
 
-## How Git Works
+<h2 id = "How Git Works">How Git Works</h2>
 
 ### The 3 parts of Git
 
