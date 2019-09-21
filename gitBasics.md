@@ -1,19 +1,19 @@
-# Git Basics
+<h1 id = 'top'>Git Basics</h1>
 
 ## Table of Contents
 
 1. [Introduction](#Introduction)
-2. [How Git Works](#How Git Works)
-3. [Creating a Local Git Repository](#Creating a Local Git Repository)
-4. [Adding a new File To The Repository](#Adding a New File To The Repository)
-5. [Creating a New Branch](#Creating a New Branch)
-6. [Create a Repository on GitHub](#Create a Repository on GitHub)
-7. [Pushing a Branch to Github](#Pushing a Branch to GitHub)
-8. [Creating a Pull Request](#Creating a Pull Request)
-9. [Merging a Pull Request](#Merging a Pull Request)
-10. [Cleaning Up](#Cleaning Up)
-11. [Getting Stuff From Gihub Back](#Getting Stuff From GitHub Back)
-12. [List of Bash and Git Commands](#List of Relevant Bash and Git Commands)
+2. [How Git Works](#HowGitWorks)
+3. [Creating a Local Git Repository](#CreateLocal)
+4. [Adding a new File To The Repository](#AddFile)
+5. [Creating a New Branch](#CreateBranch)
+6. [Create a Repository on GitHub](#CreateGitHubRepo)
+7. [Pushing a Branch to Github](#PushGitHubBranch)
+8. [Creating a Pull Request](#CreatePull)
+9. [Merging a Pull Request](#MergePull)
+10. [Cleaning Up](#CleanUp)
+11. [Getting Stuff From Gihub Back](#GetBack)
+12. [List of Bash and Git Commands](#List)
 
 
 <h2 id = "Introduction">Introduction</h2>
@@ -26,7 +26,7 @@ This only covers the extreme basics, and will not be able to troubleshoot any ma
 
 
 
-<h2 id = "How Git Works">How Git Works</h2>
+<h2 id = "HowGitWorks">How Git Works</h2>
 
 ### The 3 parts of Git
 
@@ -44,7 +44,7 @@ Or if the work changes were done on another computer/ by another user, you can p
 
 
 
-## Creating Local Git Repository
+<h2 id='CreateLocal'>Creating Local Git Repository</h2>
 
 
 Find the location for the directory where you want to initialise this git repository using:
@@ -68,7 +68,7 @@ This will the initialise the repository.
 
 
 
-## Adding a New File To The Repository
+<h2 id='AddFile'>Adding a New File To The Repository</h2>
 
 
 You can save a file in the directory, or use the touch command:
@@ -142,7 +142,7 @@ Always make sure that the comment on the commit is relevant to the commit that y
 
 
 
-## Creating a New Branch
+<h2 id='CreateBranch'>Creating a New Branch</h2>
 
 We use this when we're scared that we might break something by adding things, it makes sure that even if there's complete nuclear meltdown it doesn't affect the master branch.
 
@@ -174,7 +174,7 @@ Any changes that you make to the master will not be made to the branch and vice-
 
 
 
-## Create a Repository on GitHub
+<h2 id = 'CreateGitHubRepo'>Create a Repository on GitHub</h2>
 
 ![GitHub Logo](gitBasicsAssets/githubLogo.png)
 
@@ -205,7 +205,7 @@ With this the repository is initialised on GitHub.
 
 
 
-## Pushing a Branch to GitHub
+<h2 id = 'PushGitHubBranch'>Pushing a Branch to GitHub</h2>
 
 Pushing onto GitHub doesn't automatically override everything that is already there, you will have to merge with the master branch later:
 
@@ -217,14 +217,14 @@ After this, you can then press the green button titled "Compare and pull request
 
 
 
-## Creating a Pull Request
+<h2 id = "CreatePull">Creating a Pull Request</h2>
 
 This is way to notify repository owners of changes that you want to make to the 'code'.
 The owner can then review it and decide whether to allow it.
 
 
 
-## Merging a Pull Request
+<h2 id = 'MergePull'>Merging a Pull Request</h2>
 
 This is done by clicking the green button titled "Merge pull request", this will then merge the branch with the master.
 In some cases there will be a merge conflict, in which case you need to tell git what to use and what to chuck.
@@ -233,13 +233,13 @@ While you don't 100% have to do this as a sole owner, it does make it more clear
 
 
 
-## Cleaning Up
+<h2 id = 'CleanUp'>Cleaning Up</h2>
 
 After making sure that the request was properly executed, it is good practice to delete the branch that was just added, this clears out space and makes things less confusing in the long run.
 
 
 
-## Getting Stuff From GitHub Back
+<h2 id = 'GetBack'>Getting Stuff From GitHub Back</h2>
 
 Things will be different on your computer than from GitHub at this point, and considering this is all about version control, that ain't good chief.
 You can resolve this by pulling from GitHub to your local repository:
@@ -266,7 +266,7 @@ Merge made by the 'recursive' strategy.
 
 
 
-## List of Relevant Bash and Git Commands
+<h2 id = 'List'>List of Relevant Bash and Git Commands</h2>
 
 ```pseudocode
 ls <!-- Views the list of files within current directory -->
@@ -274,6 +274,6 @@ cd dirName <!-- Changes directory to the directory of name specified -->
 mk dirName <!-- Creates a directory in the current location of name specified -->
 git init <!-- Initialises a repository in the current directory -->
 ```
-
+[Back To Top](#top)
 
 
